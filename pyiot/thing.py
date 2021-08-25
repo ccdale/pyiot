@@ -4,7 +4,7 @@ class Thing:
         self.xtype = xtype
 
     def __repr__(self):
-        return f"<Thing(name={self.name}, xtype={self.xtype})>"
+        return f"Thing(name={self.name}, xtype={self.xtype})"
 
     def status(self):
         return True
@@ -15,4 +15,4 @@ class WindowSensor(Thing):
         super().__init__(name=name, xtype=xtype)
 
     def __repr__(self):
-        return f"<WindowSensor(name={self.name}, xtype={self.xtype})>"
+        return f"WindowSensor(name={self.name}, xtype={self.xtype})"
