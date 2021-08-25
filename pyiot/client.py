@@ -9,8 +9,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
         s.sendall(b"Hello, world")
         data = s.recv(1024)
-    except ConnectionRefusedError as e:
+    except ConnectionRefusedError:
         print("oops, no server listening.")
-        data = "None"
+        data = None
+    except Exception as e:
+        print(f"some error happened: {e}")
+        data = None
 
 print("Received", repr(data))
