@@ -31,4 +31,17 @@ def test_wsensor_with_type():
 
 def test_ws_status():
     ws = WindowSensor(xtype="thingy")
-    assert ws.status() is True
+    ws.wclose()
+    assert ws.status is True
+
+
+def test_ws_open():
+    ws = WindowSensor(xtype="thingy")
+    ws.wopen()
+    assert ws.status is False
+
+
+def test_ws_not_open():
+    ws = WindowSensor(xtype="thingy")
+    ws.wclose()
+    assert ws.status is not False
