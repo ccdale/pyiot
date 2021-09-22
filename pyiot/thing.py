@@ -12,6 +12,12 @@ class Thing:
     def health(self):
         return self.status
 
+    def listen(self):
+        pass
+
+    def send(self):
+        pass
+
 
 class WindowSensor(Thing):
     def __init__(self, name="wsensor", xtype="sensor"):
