@@ -1,3 +1,13 @@
 make a synthetic switch
 that can be queried for it's state
 and can have it's state changed.
+
+the switch needs to respond to 2 commands
+
+    state: tell me whether it is on or off
+    switch: switch to the other state
+
+while the switch command is active all other switch commands should be ignored.
+
+---
+Listener: write tests to test listen function
