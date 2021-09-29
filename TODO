@@ -11,3 +11,14 @@ while the switch command is active all other switch commands should be ignored.
 
 ---
 Listener: write tests to test listen function
+
+str(b"string") doesn't work as I expected (thanks Merry)
+
+>>> b
+b'hello'
+>>> b.decode()
+'hello'
+>>> str(b)
+"b'hello'"
+
+so we will have to use string.decode()
